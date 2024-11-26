@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Communication/etc/communication.xsd">
+    <topic name="majerome.sentimate.reviews" request="string"/>
+
+    <!--    When to Opt for communication.xml?-->
+    <!--    You might be thinking, "Why bother with communication.xml if we've already set up everything in queue_consumer.xml?" Well, it's all about how you want to organize and handle your messages, and depends on your specific situation.-->
+
+    <!--    communication.xml is great for when:-->
+
+    <!--    You want to set some default handling instructions that aren't tied to one particular consumer.-->
+    <!--    You're planning for your system to grow, and may want to add additional consumers to process messages similarly.-->
+    <!--    You like the idea of having all your handling instructions in one place for simpler updates and management.-->
+
+    <!--    Why Should We Prefer queue_consumer.xml?-->
+    <!--    Although communication.xml has its perks, queue_consumer.xml has a special place in our hearts (and our code) for a few reasons:-->
+
+    <!--    It gives us clarity by directly mapping a consumer to its handler. It's like having a dedicated go-to person for each task, rather than one person for all tasks.-->
+    <!--    It allows for modular changes. Want to update or switch out a handler? No sweat, you can do so without affecting the rest of the consumer processes.-->
+    <!--    It often results in better performance, since Magento doesn't need to figure out which handler to use, as it's already been told explicitly.-->
+
+    <!--    Making the Choice That's Right for You-->
+    <!--    Choosing between queue_consumer.xml and communication.xml depends on your project's needs. You’ll most likely want to stick with queue_consumer.xml unless you had very specific needs to do otherwise, as defining consumers this way is more explicit and easier to reason.-->
+    <!--    Even though queue_consumer.xml is generally the preferred option, knowing how to utilize communication.xml can really come in handy as your Magento needs grow and evolve.-->
+
+    <!--    <topic name="majerome.sentimate.reviews" request="string">-->
+    <!--        <handler name="majerome.sentimate.reviews"-->
+    <!--                 type="Majerome\Sentimate\Model\ReviewConsumer"-->
+    <!--                 method="process"/>-->
+    <!--    </topic>-->
+
+</config>
+
